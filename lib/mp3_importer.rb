@@ -17,9 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files.fill.split(" - ")[1] do |filename|
-      #binding.pry
-     Artist.all << Song.new_by_filename(filename)
+    self.files.fill.split(" - ")[1] 
     end
   end
 end
