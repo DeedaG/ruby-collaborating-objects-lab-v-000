@@ -17,7 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files.include?(Song.new) do |filename|
+    self.files.fill do |filename|
       #binding.pry
      Artist.all << Song.new_by_filename(filename)
     end
