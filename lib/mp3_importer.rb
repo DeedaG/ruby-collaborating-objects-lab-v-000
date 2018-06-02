@@ -19,7 +19,7 @@ class MP3Importer
   def import
     self.files.fill do |filename|
       #binding.pry
-     Song.new_by_filename(filename)
+     Artist.all << Song.new_by_filename(filename)
     end
   end
 end
