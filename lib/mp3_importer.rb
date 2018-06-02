@@ -17,7 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files.map! do |filename|
+    self.files.map do |filename|
       #binding.pry
      Artist.all << Song.new_by_filename(filename)
     end
