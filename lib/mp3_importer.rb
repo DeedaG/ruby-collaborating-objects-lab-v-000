@@ -1,7 +1,7 @@
 require 'pry'
 class MP3Importer
 
-  attr_accessor :path, :file
+  attr_accessor :path, :file, :songs
 
   def initialize(path)
     @path = path
