@@ -17,7 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files.collect! do |filename|
+    self.files.uniq do |filename|
       #binding.pry
      Artist.all << Song.new_by_filename(filename)
     end
