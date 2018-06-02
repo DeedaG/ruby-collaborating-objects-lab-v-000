@@ -17,7 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files.shuffle do |filename|
+    self.files.include? do |filename|
       #binding.pry
      Artist.all << Song.new_by_filename(filename)
     end
