@@ -17,7 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files.split(" - ")[1]
+    
 
   end
 end
