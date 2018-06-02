@@ -1,7 +1,7 @@
 require 'pry'
 class MP3Importer
 
-  attr_accessor :path, :file, :songs
+  attr_accessor :path, :songs
 
   def initialize(path)
     @path = path
@@ -17,7 +17,9 @@ class MP3Importer
   end
 
   def import
-    self.files.each{|file_name| Song.new_by_filename(file_name)}
-
+    files.each do |file|
+      artist_name, song_name = file.split(" - ")
+      Artist.find_or_create_by_name(artist_name)
+      Artist.all.last.songs << Song.new_by_filename(file)
   end
 end
