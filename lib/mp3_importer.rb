@@ -5,7 +5,7 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-  
+
   end
 
   def files
@@ -18,6 +18,7 @@ class MP3Importer
 
   def import
     self.files.each do |filename|
+      binding.pry
      Song.new_by_filename(filename)
     end
   end
