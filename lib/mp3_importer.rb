@@ -17,7 +17,7 @@ class MP3Importer
   end
 
   def import
-    self.files << Song.new_by_filename(file)
+    library << Song.new_by_filename(file)
 
   end
 end
