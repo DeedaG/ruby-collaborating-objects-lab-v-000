@@ -18,6 +18,6 @@ class MP3Importer
 
   def import
     self.files.fill.split(" - ")[1] 
-    end
+    
   end
 end
